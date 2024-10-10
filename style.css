@@ -1,0 +1,200 @@
+/* Estilos generales */
+body {
+    font-famaily: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed; /* Fija el menú en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+header nav {
+    background-color: #111; /* Color de fondo del menú */
+}
+
+/* Navegación */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 15px;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #00aaff; /* Color azul brillante para hover */
+}
+
+/* Sección de Inicio */
+.hero {
+    background-image: url(barber.jpg);
+    text-align: center;
+    padding: 240px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Estilos para la sección de Servicios */
+.servicios {
+    background-color: #111;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.servicio {
+    margin: 20px;
+    display: inline-block;
+    width: calc(33% - 40px); /* Ajusta el ancho de cada servicio */
+}
+
+.servicio img {
+    width: 100%; /* Imágenes responsivas */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.servicio h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.servicio p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.sobre-nosotros h2{
+    text-align: center;
+}
+
+.sobre-nosotros p {
+    text-align: center;
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .servicio {
+        width: calc(100% - 40px); /* Cada servicio ocupará todo el ancho en móviles */
+    }
+}
+
+
+/* Sección de Galería */
+.galeria {
+    background-color: #222;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.galeria .fotos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 2px solid #fff;
+}
+
+/* Sección de Contacto */
+.contacto {
+    background-color: #111;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Estilos para el menú desplegable */
+.menu-toggle {
+    display: none; /* Oculta el botón en pantallas grandes */
+    flex-direction: column;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Estilos para el menú en dispositivos móviles */
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-list li {
+    display: inline; /* Menú horizontal en pantallas grandes */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Muestra el botón en pantallas pequeñas */
+    }
+
+    .nav-list {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column; /* Menú vertical en dispositivos móviles */
+        width: 100%;
+        background-color: #111; /* Color de fondo del menú */
+        position: absolute;
+        top: 70px; /* Coloca el menú debajo del encabezado */
+        left: 0;
+    }
+
+    .nav-list.active {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .nav-list li {
+        text-align: center;
+        padding: 10px 0; /* Espaciado para cada elemento */
+    }
+}
